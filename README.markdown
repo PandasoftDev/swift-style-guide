@@ -28,6 +28,7 @@ Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/
   * [Type Inference](#type-inference)
   * [Syntactic Sugar](#syntactic-sugar)
 * [Control Flow](#control-flow)
+* [Return and break early](#return-and-break-early)
 * [Semicolons](#semicolons)
 * [Copyright Statement](#copyright-statement)
 * [Smiley Face](#smiley-face)
@@ -533,6 +534,27 @@ for var i = 0; i < attendeeList.count; i++ {
   print("\(person) is at position #\(i)")
 }
 ```
+#### Return and break early
+
+When you have to meet certain criteria to continue execution, try to exit early. So, instead of this:
+
+```swift
+if n.isNumber {
+    // Use n here
+} else {
+    return
+}
+```
+
+use this:
+```swift
+guard n.isNumber else {
+    return
+}
+// Use n here
+```
+
+You can also do it with `if` statement, but using `guard` is prefered, because `guard` statement without `return`, `break` or `continue` produces a compile-time error, so exit is guaranteed.
 
 
 ## Semicolons

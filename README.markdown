@@ -7,7 +7,7 @@ Our overarching goals are conciseness, readability, and simplicity.
 Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) too.
 
 ## Table of Contents
-* [Whitespace](#Whitespace)
+* [Whitespace](#whitespace)
 * [Naming](#naming)
   * [Enumerations](#enumerations)
   * [Prose](#prose)

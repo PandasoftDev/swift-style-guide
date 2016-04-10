@@ -30,6 +30,7 @@ Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/
 * [Control Flow](#control-flow)
 * [Return and break early](#return-and-break-early)
 * [Semicolons](#semicolons)
+* [Use whitespace around operator definitions](#use-whitespace-around-operator-definitions)
 * [Copyright Statement](#copyright-statement)
 * [Smiley Face](#smiley-face)
 * [Credits](#credits)
@@ -574,6 +575,23 @@ let swift = "not a scripting language"
 ```swift
 let swift = "not a scripting language";
 ```
+#### Use whitespace around operator definitions
+
+Use whitespace around operators when defining them. Instead of:
+
+```swift
+func <|(lhs: Int, rhs: Int) -> Int
+func <|<<A>(lhs: A, rhs: A) -> A
+```
+
+write:
+
+```swift
+func <| (lhs: Int, rhs: Int) -> Int
+func <|< <A>(lhs: A, rhs: A) -> A
+```
+
+_Rationale:_ Operators consist of punctuation characters, which can make them difficult to read when immediately followed by the punctuation for a type or value parameter list. Adding whitespace separates the two more clearly.
 
 **NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
 
